@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿quieres ser mi novia?</title>
+    <link rel="stylesheet" href="css/nov.css">
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: aliceblue;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #container{
+            text-align: center;
+        }
+        #buttons{
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        button{
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 18px;
+            color: aquamarine;
+            background-color: green;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover{
+            background-color: greenyellow;
+        }
+        #btnNo{
+            background-color: red;
+        }
+        #btnNo:hover{
+            background-color: brown;
+        }
+        img{
+            margin-top: 30px;
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)
+        }
+    </style>
+    <script>
+        function accionparacuandoelladigaquesi() {
+            alert("!ahora ya somos novios¡ <3");
+        }
+        function mueveelboton(){
+            const width = window.innerWidth;
+            const  height = window.innerHeight;
+
+            const newWidth = Math.random()*width;
+            const newHeight = Math.random()*height;
+
+            const btnNo= document.getElementById("btnNo");
+            btnNo.style.position= "absolute";
+            btnNo.style.left= newWidth+ "px";
+            btnNo.style.top=newHeight+ "px";
+
+        }
+    </script>
+</head>
+<body>
+    <div id="container">
+        <h1>¿quieres ser mi novia?</h1>
+        <div id="buttons">
+            <a href="opsionsi.html"><button onclick="accionparacuandoelladigasi()" id="btnSi">Si</button></a>
+            <button id="btnNo" onmouseover="mueveelboton()">No</button>
+        </div>
+    </div>
+
+    <script>
+        function accionparacuandoelladigaquesi(){
+            const respuesta=confirm("¿estas segura que quieres ser mi novia?");
+            if (respuesta){
+                window.location.href="opsionsi.html";
+            }
+            else{
+                alert("espero cambies de opinion");
+            }
+        }
+        function mueveelboton(){
+            const width = window.innerWidth;
+            const  height = window.innerHeight;
+
+            const newWidth = Math.random()*width;
+            const newHeight = Math.random()*height;
+
+            const btnNo= document.getElementById("btnNo");
+            btnNo.style.position= "absolute";
+            btnNo.style.left= newWidth+ "px";
+            btnNo.style.top=newHeight+ "px";
+        }
+    </script>
+</body>
+</html>
+
+
